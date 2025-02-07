@@ -1,7 +1,7 @@
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 import json
-from logiqidsP1.logiqidsP1.models import User, UserReferralCode
+from logiqidsP1.models import User, UserReferralCode
 from ..RequestValidator.validators import validate_request
 
 @csrf_exempt
