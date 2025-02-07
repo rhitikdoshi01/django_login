@@ -16,7 +16,9 @@ EMAIL_REGEX = r"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
 
 @csrf_exempt
 def register_user(request):
-    if request.method == "POST":
+    if request.method == "OPTIONS":
+        return JsonResponse({"message": "OK"}, status=200)
+    elif request.method == "POST":
         required_fields = {
             "username": str,
             "email": str,
